@@ -14,6 +14,9 @@
 		30FB6D93237C964500C0EFC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FB6D92237C964500C0EFC3 /* Assets.xcassets */; };
 		30FB6D96237C964500C0EFC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FB6D94237C964500C0EFC3 /* LaunchScreen.storyboard */; };
 		30FB6DA1237C964500C0EFC3 /* Wattpad_AssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DA0237C964500C0EFC3 /* Wattpad_AssessmentTests.swift */; };
+		30FB6DAC237CB9F700C0EFC3 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DAB237CB9F700C0EFC3 /* StoriesTableViewController.swift */; };
+		30FB6DAF237CBA1200C0EFC3 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DAE237CBA1200C0EFC3 /* Story.swift */; };
+		30FB6DB2237CBD3C00C0EFC3 /* StoriesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DB1237CBD3C00C0EFC3 /* StoriesJSON.swift */; };
 		D4AA97A37B2DE4E3F31C5A3F /* Pods_Wattpad_AssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE219A7B5E92734CED8C229 /* Pods_Wattpad_AssessmentTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		30FB6D9C237C964500C0EFC3 /* Wattpad AssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wattpad AssessmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FB6DA0237C964500C0EFC3 /* Wattpad_AssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wattpad_AssessmentTests.swift; sourceTree = "<group>"; };
 		30FB6DA2237C964500C0EFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30FB6DAB237CB9F700C0EFC3 /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
+		30FB6DAE237CBA1200C0EFC3 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		30FB6DB1237CBD3C00C0EFC3 /* StoriesJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesJSON.swift; sourceTree = "<group>"; };
 		5FD19E0AAA67057B47F2D9AD /* Pods_Wattpad_Assessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wattpad_Assessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD6F9384F50960ED4095636 /* Pods-Wattpad Assessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad Assessment.debug.xcconfig"; path = "Target Support Files/Pods-Wattpad Assessment/Pods-Wattpad Assessment.debug.xcconfig"; sourceTree = "<group>"; };
 		D8BEF4237C6CD4B028960BAB /* Pods-Wattpad Assessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad Assessment.release.xcconfig"; path = "Target Support Files/Pods-Wattpad Assessment/Pods-Wattpad Assessment.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 				30FB6D92237C964500C0EFC3 /* Assets.xcassets */,
 				30FB6D94237C964500C0EFC3 /* LaunchScreen.storyboard */,
 				30FB6D97237C964500C0EFC3 /* Info.plist */,
+				30FB6DAD237CB9FC00C0EFC3 /* Views */,
+				30FB6DB0237CBA1800C0EFC3 /* Models */,
 			);
 			path = "Wattpad Assessment";
 			sourceTree = "<group>";
@@ -106,6 +114,23 @@
 				30FB6DA2237C964500C0EFC3 /* Info.plist */,
 			);
 			path = "Wattpad AssessmentTests";
+			sourceTree = "<group>";
+		};
+		30FB6DAD237CB9FC00C0EFC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30FB6DAB237CB9F700C0EFC3 /* StoriesTableViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30FB6DB0237CBA1800C0EFC3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30FB6DAE237CBA1200C0EFC3 /* Story.swift */,
+				30FB6DB1237CBD3C00C0EFC3 /* StoriesJSON.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7EE44E5E2583892836D39CC0 /* Pods */ = {
@@ -295,8 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FB6DAC237CB9F700C0EFC3 /* StoriesTableViewController.swift in Sources */,
+				30FB6DB2237CBD3C00C0EFC3 /* StoriesJSON.swift in Sources */,
 				30FB6D8A237C964400C0EFC3 /* AppDelegate.swift in Sources */,
 				30FB6D8C237C964400C0EFC3 /* SceneDelegate.swift in Sources */,
+				30FB6DAF237CBA1200C0EFC3 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
