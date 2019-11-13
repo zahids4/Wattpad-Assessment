@@ -3,17 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272AD9BEE812AABDCD534FE5 /* Pods_Wattpad_Assessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD19E0AAA67057B47F2D9AD /* Pods_Wattpad_Assessment.framework */; };
 		30FB6D8A237C964400C0EFC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6D89237C964400C0EFC3 /* AppDelegate.swift */; };
 		30FB6D8C237C964400C0EFC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6D8B237C964400C0EFC3 /* SceneDelegate.swift */; };
-		30FB6D8E237C964400C0EFC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6D8D237C964400C0EFC3 /* ViewController.swift */; };
 		30FB6D91237C964400C0EFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FB6D8F237C964400C0EFC3 /* Main.storyboard */; };
 		30FB6D93237C964500C0EFC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FB6D92237C964500C0EFC3 /* Assets.xcassets */; };
 		30FB6D96237C964500C0EFC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FB6D94237C964500C0EFC3 /* LaunchScreen.storyboard */; };
 		30FB6DA1237C964500C0EFC3 /* Wattpad_AssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DA0237C964500C0EFC3 /* Wattpad_AssessmentTests.swift */; };
+		D4AA97A37B2DE4E3F31C5A3F /* Pods_Wattpad_AssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE219A7B5E92734CED8C229 /* Pods_Wattpad_AssessmentTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A31BE0B5710D26D465F8A1B /* Pods-Wattpad AssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad AssessmentTests.debug.xcconfig"; path = "Target Support Files/Pods-Wattpad AssessmentTests/Pods-Wattpad AssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0BE219A7B5E92734CED8C229 /* Pods_Wattpad_AssessmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wattpad_AssessmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FB6D86237C964400C0EFC3 /* Wattpad Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wattpad Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FB6D89237C964400C0EFC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30FB6D8B237C964400C0EFC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		30FB6D8D237C964400C0EFC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		30FB6D90237C964400C0EFC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30FB6D92237C964500C0EFC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30FB6D95237C964500C0EFC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +40,10 @@
 		30FB6D9C237C964500C0EFC3 /* Wattpad AssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wattpad AssessmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FB6DA0237C964500C0EFC3 /* Wattpad_AssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wattpad_AssessmentTests.swift; sourceTree = "<group>"; };
 		30FB6DA2237C964500C0EFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FD19E0AAA67057B47F2D9AD /* Pods_Wattpad_Assessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wattpad_Assessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBD6F9384F50960ED4095636 /* Pods-Wattpad Assessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad Assessment.debug.xcconfig"; path = "Target Support Files/Pods-Wattpad Assessment/Pods-Wattpad Assessment.debug.xcconfig"; sourceTree = "<group>"; };
+		D8BEF4237C6CD4B028960BAB /* Pods-Wattpad Assessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad Assessment.release.xcconfig"; path = "Target Support Files/Pods-Wattpad Assessment/Pods-Wattpad Assessment.release.xcconfig"; sourceTree = "<group>"; };
+		F46D6684ACFDF414499669ED /* Pods-Wattpad AssessmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad AssessmentTests.release.xcconfig"; path = "Target Support Files/Pods-Wattpad AssessmentTests/Pods-Wattpad AssessmentTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272AD9BEE812AABDCD534FE5 /* Pods_Wattpad_Assessment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4AA97A37B2DE4E3F31C5A3F /* Pods_Wattpad_AssessmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +72,8 @@
 				30FB6D88237C964400C0EFC3 /* Wattpad Assessment */,
 				30FB6D9F237C964500C0EFC3 /* Wattpad AssessmentTests */,
 				30FB6D87237C964400C0EFC3 /* Products */,
+				7EE44E5E2583892836D39CC0 /* Pods */,
+				BCD0E866B17BEA946B1FA317 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +91,6 @@
 			children = (
 				30FB6D89237C964400C0EFC3 /* AppDelegate.swift */,
 				30FB6D8B237C964400C0EFC3 /* SceneDelegate.swift */,
-				30FB6D8D237C964400C0EFC3 /* ViewController.swift */,
 				30FB6D8F237C964400C0EFC3 /* Main.storyboard */,
 				30FB6D92237C964500C0EFC3 /* Assets.xcassets */,
 				30FB6D94237C964500C0EFC3 /* LaunchScreen.storyboard */,
@@ -99,6 +108,26 @@
 			path = "Wattpad AssessmentTests";
 			sourceTree = "<group>";
 		};
+		7EE44E5E2583892836D39CC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BBD6F9384F50960ED4095636 /* Pods-Wattpad Assessment.debug.xcconfig */,
+				D8BEF4237C6CD4B028960BAB /* Pods-Wattpad Assessment.release.xcconfig */,
+				0A31BE0B5710D26D465F8A1B /* Pods-Wattpad AssessmentTests.debug.xcconfig */,
+				F46D6684ACFDF414499669ED /* Pods-Wattpad AssessmentTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BCD0E866B17BEA946B1FA317 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FD19E0AAA67057B47F2D9AD /* Pods_Wattpad_Assessment.framework */,
+				0BE219A7B5E92734CED8C229 /* Pods_Wattpad_AssessmentTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30FB6DA5237C964500C0EFC3 /* Build configuration list for PBXNativeTarget "Wattpad Assessment" */;
 			buildPhases = (
+				F73F69D6D436F507D6D32B32 /* [CP] Check Pods Manifest.lock */,
 				30FB6D82237C964400C0EFC3 /* Sources */,
 				30FB6D83237C964400C0EFC3 /* Frameworks */,
 				30FB6D84237C964400C0EFC3 /* Resources */,
+				3A69CBAB38DC36BCFBDEA761 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30FB6DA8237C964500C0EFC3 /* Build configuration list for PBXNativeTarget "Wattpad AssessmentTests" */;
 			buildPhases = (
+				C79DE5201184EB51B7F0456D /* [CP] Check Pods Manifest.lock */,
 				30FB6D98237C964500C0EFC3 /* Sources */,
 				30FB6D99237C964500C0EFC3 /* Frameworks */,
 				30FB6D9A237C964500C0EFC3 /* Resources */,
@@ -194,12 +226,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A69CBAB38DC36BCFBDEA761 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wattpad Assessment/Pods-Wattpad Assessment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wattpad Assessment/Pods-Wattpad Assessment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wattpad Assessment/Pods-Wattpad Assessment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C79DE5201184EB51B7F0456D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wattpad AssessmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F73F69D6D436F507D6D32B32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wattpad Assessment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		30FB6D82237C964400C0EFC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30FB6D8E237C964400C0EFC3 /* ViewController.swift in Sources */,
 				30FB6D8A237C964400C0EFC3 /* AppDelegate.swift in Sources */,
 				30FB6D8C237C964400C0EFC3 /* SceneDelegate.swift in Sources */,
 			);
@@ -359,6 +454,7 @@
 		};
 		30FB6DA6237C964500C0EFC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBD6F9384F50960ED4095636 /* Pods-Wattpad Assessment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +472,7 @@
 		};
 		30FB6DA7237C964500C0EFC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8BEF4237C6CD4B028960BAB /* Pods-Wattpad Assessment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -393,6 +490,7 @@
 		};
 		30FB6DA9237C964500C0EFC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A31BE0B5710D26D465F8A1B /* Pods-Wattpad AssessmentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -414,6 +512,7 @@
 		};
 		30FB6DAA237C964500C0EFC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F46D6684ACFDF414499669ED /* Pods-Wattpad AssessmentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
