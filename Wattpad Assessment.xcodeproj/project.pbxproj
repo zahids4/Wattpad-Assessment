@@ -103,10 +103,9 @@
 			children = (
 				30FB6D89237C964400C0EFC3 /* AppDelegate.swift */,
 				30FB6D8B237C964400C0EFC3 /* SceneDelegate.swift */,
-				30FB6D8F237C964400C0EFC3 /* Main.storyboard */,
 				30FB6D92237C964500C0EFC3 /* Assets.xcassets */,
-				30FB6D94237C964500C0EFC3 /* LaunchScreen.storyboard */,
 				30FB6D97237C964500C0EFC3 /* Info.plist */,
+				30FB6DBA237CC93100C0EFC3 /* Storyboards */,
 				30FB6DAD237CB9FC00C0EFC3 /* Views */,
 				30FB6DB0237CBA1800C0EFC3 /* Models */,
 				30FB6DB5237CC26900C0EFC3 /* ViewModels */,
@@ -148,6 +147,15 @@
 				30FB6DB6237CC27A00C0EFC3 /* StoryViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		30FB6DBA237CC93100C0EFC3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				30FB6D8F237C964400C0EFC3 /* Main.storyboard */,
+				30FB6D94237C964500C0EFC3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		7EE44E5E2583892836D39CC0 /* Pods */ = {
