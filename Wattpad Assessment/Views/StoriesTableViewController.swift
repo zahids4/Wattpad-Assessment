@@ -42,6 +42,8 @@ extension StoriesTableViewController: StoriesViewModelDelegate {
     func fetchComplete() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            let alert = StoriesPersistedAlert().getAlert()
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
