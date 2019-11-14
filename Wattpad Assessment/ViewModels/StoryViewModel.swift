@@ -5,10 +5,13 @@
 //  Created by Saim Zahid on 2019-11-13.
 //
 
-import Foundation
+import UIKit
 
 protocol StoryViewModelProtocol {
     var title: String { get }
+    var authorText: String { get }
+    var coverImage: UIImage { get }
+    var coverDownloaded: Bool { get }
 }
 
 class StoryViewModel: StoryViewModelProtocol {
@@ -20,5 +23,15 @@ class StoryViewModel: StoryViewModelProtocol {
     
     var title: String {
         return story.title
+    }
+    
+    var authorText: String {
+        return "By: \(story.author)"
+    }
+    
+    var coverImage: UIImage = UIImage(systemName: "cloud")!
+    
+    var coverDownloaded: Bool {
+        return coverImage != UIImage(systemName: "cloud")
     }
 }
