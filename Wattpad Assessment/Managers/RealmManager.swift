@@ -5,7 +5,7 @@ class RealmStoriesManager {
     private init() {}
     static let shared = RealmStoriesManager()
     
-    func saveFetchedStories(_ stories: [Story]) {
+    func saveFetchedStories(_ stories: [Story], closure: @escaping () -> ()) {
         let realm = try! Realm()
         let listOfStories = List<Story>()
         stories.forEach({ listOfStories.append($0) })
@@ -13,6 +13,8 @@ class RealmStoriesManager {
         try! realm.write {
             realm.add(listOfStories, update: .modified)
         }
+        
+        closure()
     }
     
     func deleteAllStories() {

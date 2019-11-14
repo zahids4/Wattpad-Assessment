@@ -35,15 +35,23 @@ class StoriesViewModel: StoriesViewModelProtocol {
     }
 
     func fetchStories() {
-        guard NetworkManager.shared.isConnectedToInternet else { return }
+        let setStoriesAndRefresh = {
+            self.stories = RealmStoriesManager.shared.getStories.map({ StoryViewModel($0) })
+            self.delegate?.fetchComplete()
+        }
+        
+        guard NetworkManager.shared.isConnectedToInternet else {
+            setStoriesAndRefresh()
+            return
+        }
         
         AF.request(storiesURL).responseDecodable(of: StoriesJSON.self) { response in
             switch response.result {
                 case .success(let json):
-                    self.realmManager.saveFetchedStories(json.stories)
-                    self.stories = json.stories.map { StoryViewModel($0) }
-                    self.delegate?.fetchComplete()
-                    self.delegate?.showAlert()
+                    self.realmManager.saveFetchedStories(json.stories) {
+                        setStoriesAndRefresh()
+                        self.delegate?.showAlert()
+                    }
                 case .failure(let error):
                     self.delegate?.fetchFailed(error)
             }
