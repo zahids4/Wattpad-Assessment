@@ -1,6 +1,12 @@
 import Foundation
 import Network
+import Alamofire
 
-//class NetworkManager {
-//    <#code#>
-//}
+class NetworkManager {
+    private init() {}
+    static let shared = NetworkManager()
+    
+    var isConnectedToInternet: Bool {
+        return NetworkReachabilityManager()!.isReachable
+    }
+}

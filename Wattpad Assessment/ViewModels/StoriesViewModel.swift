@@ -30,6 +30,8 @@ class StoriesViewModel: StoriesViewModelProtocol {
     }
 
     func fetchStories() {
+        guard NetworkManager.shared.isConnectedToInternet else { return }
+        
         AF.request(storiesURL).responseDecodable(of: StoriesJSON.self) { response in
             switch response.result {
                 case .success(let json):
