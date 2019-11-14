@@ -11,7 +11,7 @@ class RealmStoriesManager {
         stories.forEach({ listOfStories.append($0) })
         
         try! realm.write {
-            realm.add(listOfStories)
+            realm.add(listOfStories, update: .modified)
         }
     }
     
