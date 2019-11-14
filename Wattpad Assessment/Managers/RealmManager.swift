@@ -15,6 +15,13 @@ class RealmStoriesManager {
         }
     }
     
+    func deleteAllStories() {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+    }
+    
     var getStories: Results<Story> {
         let realm = try! Realm()
         return realm.objects(Story.self)

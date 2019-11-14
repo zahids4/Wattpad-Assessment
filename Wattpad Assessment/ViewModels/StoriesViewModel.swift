@@ -22,12 +22,14 @@ class StoriesViewModel: StoriesViewModelProtocol {
         self.delegate = delegate
     }
     
+    let realmManager = RealmStoriesManager.shared
+    
     var storiesCount: Int {
-        return RealmStoriesManager.shared.getStories.count
+        return realmManager.getStories.count
     }
     
     func story(at index: Int) -> StoryViewModelProtocol {
-        return RealmStoriesManager.shared.getStory(at: index)
+        return realmManager.getStory(at: index)
     }
 
     func fetchStories() {
@@ -36,7 +38,7 @@ class StoriesViewModel: StoriesViewModelProtocol {
         AF.request(storiesURL).responseDecodable(of: StoriesJSON.self) { response in
             switch response.result {
                 case .success(let json):
-                    RealmStoriesManager.shared.saveFetchedStories(json.stories)
+                    self.realmManager.saveFetchedStories(json.stories)
                     self.delegate?.fetchComplete()
                     self.delegate?.showAlert()
                 case .failure(let error):

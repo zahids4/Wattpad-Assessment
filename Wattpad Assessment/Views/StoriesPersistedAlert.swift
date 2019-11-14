@@ -1,6 +1,5 @@
 import UIKit
 
-
 class StoriesPersistedAlert {
     func getAlert() -> UIAlertController {
         let alert = UIAlertController(title: "Stories Saved!", message: "These stories can now be accessed offline", preferredStyle: .alert)
