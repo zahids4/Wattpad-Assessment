@@ -42,10 +42,16 @@ extension StoriesTableViewController: StoriesViewModelDelegate {
     func fetchComplete() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }
+    }
+    
+    func showAlert() {
+        DispatchQueue.main.async {
             let alert = StoriesPersistedAlert().getAlert()
             self.present(alert, animated: true, completion: nil)
         }
     }
+
     
     func fetchFailed(_ error: AFError) {
         print("Error: \(error)")
