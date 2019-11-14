@@ -56,7 +56,7 @@ class StoriesTableViewController: UITableViewController {
 
             DispatchQueue.main.async {
                 self.operations.downloadsInProgress.removeValue(forKey: indexPath)
-                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+                self.tableView.reloadRows(at: [indexPath], with: .fade)
             }
         }
 

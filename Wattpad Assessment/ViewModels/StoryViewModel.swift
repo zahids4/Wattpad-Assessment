@@ -37,7 +37,7 @@ class StoryViewModel: StoryViewModelProtocol {
         return "By: \(story.author)"
     }
     
-    var coverImage: UIImage = UIImage(systemName: "cloud")!
+    var coverImage: UIImage = UIImage()
     
     var imageDownloadState: ImageDownloadState = .new
     
