@@ -13,19 +13,19 @@ class DownloadOperation: Operation {
     }
     
     override func main() {
-        if isCancelled { return }
-        
-        guard let imageData = storyViewModel.fetchCoverImage() else { return }
-        
-        if isCancelled {
-          return
-        }
-        
-        if !imageData.isEmpty {
-            storyViewModel.coverImage = UIImage(data:imageData)!
-            storyViewModel.imageDownloadState = .downloaded
-        } else {
-            storyViewModel.imageDownloadState = .failed
+        DispatchQueue.main.async {
+            if self.isCancelled { return }
+            
+            guard let imageData = self.storyViewModel.fetchCoverImage() else { return }
+            
+            if self.isCancelled { return }
+            
+            if !imageData.isEmpty {
+                self.storyViewModel.coverImage = UIImage(data:imageData)!
+                self.storyViewModel.imageDownloadState = .downloaded
+            } else {
+                self.storyViewModel.imageDownloadState = .failed
+            }
         }
     }
     

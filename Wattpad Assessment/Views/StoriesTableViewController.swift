@@ -9,6 +9,7 @@ import UIKit
 import Alamofire
 
 class StoriesTableViewController: UITableViewController {
+    private let operations = ImageDownloadOperations()
     private var viewModel: StoriesViewModelProtocol!
     
     override func viewDidLoad() {
@@ -38,7 +39,29 @@ class StoriesTableViewController: UITableViewController {
         let story = viewModel.story(at: indexPath.row)
         cell.configure(with: story)
         
+        if story.shouldDownloadImage {
+            startDownloadOperation(for: story, at: indexPath)
+        }
+        
         return cell
+    }
+    
+    private func startDownloadOperation(for story: StoryViewModelProtocol, at indexPath: IndexPath) {
+        guard operations.downloadsInProgress[indexPath] == nil else { return }
+
+        let downloadOperation = DownloadOperation(story)
+
+        downloadOperation.completionBlock = {
+            if downloadOperation.isCancelled { return }
+
+            DispatchQueue.main.async {
+                self.operations.downloadsInProgress.removeValue(forKey: indexPath)
+                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+        }
+
+        operations.downloadsInProgress[indexPath] = downloadOperation
+        operations.operationQueue.addOperation(downloadOperation)
     }
 }
 

@@ -36,7 +36,7 @@ class StoriesViewModel: StoriesViewModelProtocol {
 
     func fetchStories() {
         let setStoriesAndRefresh = {
-            self.stories = RealmStoriesManager.shared.getStories.map({ StoryViewModel($0) })
+            self.stories = self.realmManager.getStories.map({ StoryViewModel($0) })
             self.delegate?.fetchComplete()
         }
         

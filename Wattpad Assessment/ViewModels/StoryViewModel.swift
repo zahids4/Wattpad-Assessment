@@ -18,6 +18,7 @@ protocol StoryViewModelProtocol {
     var authorText: String { get }
     var coverImage: UIImage { get set }
     var imageDownloadState: ImageDownloadState { get set }
+    var shouldDownloadImage: Bool { get }
     func fetchCoverImage() -> Data?
 }
 
@@ -40,8 +41,12 @@ class StoryViewModel: StoryViewModelProtocol {
     
     var imageDownloadState: ImageDownloadState = .new
     
+    var shouldDownloadImage: Bool {
+        imageDownloadState == .new && NetworkManager.shared.isConnectedToInternet
+    }
+    
     func fetchCoverImage() -> Data? {
-        return getDataFromImageURL(self.story.coverImageUrl)
+        return getDataFromImageURL(story.coverImageUrl)
      }
 }
 
