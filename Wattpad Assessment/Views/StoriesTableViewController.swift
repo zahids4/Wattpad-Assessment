@@ -13,6 +13,7 @@ class StoriesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewModel = StoriesViewModel(delegate: self)
         viewModel.fetchStories()
     }
