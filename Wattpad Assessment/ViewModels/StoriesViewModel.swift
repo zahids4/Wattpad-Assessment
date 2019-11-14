@@ -18,6 +18,8 @@ protocol StoriesViewModelDelegate: class {
 class StoriesViewModel: StoriesViewModelProtocol {
     weak var delegate: StoriesViewModelDelegate?
     
+    private var stories: [StoryViewModelProtocol] = []
+    
     init(delegate: StoriesViewModelDelegate) {
         self.delegate = delegate
     }
@@ -25,11 +27,11 @@ class StoriesViewModel: StoriesViewModelProtocol {
     let realmManager = RealmStoriesManager.shared
     
     var storiesCount: Int {
-        return realmManager.getStories.count
+        return stories.count
     }
     
     func story(at index: Int) -> StoryViewModelProtocol {
-        return realmManager.getStory(at: index)
+        return stories[index]
     }
 
     func fetchStories() {
@@ -39,6 +41,7 @@ class StoriesViewModel: StoriesViewModelProtocol {
             switch response.result {
                 case .success(let json):
                     self.realmManager.saveFetchedStories(json.stories)
+                    self.stories = json.stories.map { StoryViewModel($0) }
                     self.delegate?.fetchComplete()
                     self.delegate?.showAlert()
                 case .failure(let error):
