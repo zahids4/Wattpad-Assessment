@@ -24,9 +24,16 @@ protocol StoryViewModelProtocol {
 
 class StoryViewModel: StoryViewModelProtocol {
     private let story: Story
+    private let coverImageUrl: String
     
     init(_ story: Story) {
         self.story = story
+        // The coverImageUrl attributed is extracted out because I was running into threading issues with Realm
+        // when I accessed it in the DownloadOperation class, because it wanted the operation to run on the same thread
+        // as the thread that acessed the url which is the Main thread
+        // that lead to laggy scrolling on the table view because the download was happening on the mian queue
+        // this is the easiest way to solve that issue without creating a complex threading solution.
+        self.coverImageUrl = story.coverImageUrl
     }
     
     var title: String {
@@ -46,13 +53,6 @@ class StoryViewModel: StoryViewModelProtocol {
     }
     
     func fetchCoverImage() -> Data? {
-        return getDataFromImageURL(story.coverImageUrl)
+        return try? Data(contentsOf: URL(string: coverImageUrl)!)
      }
-}
-
-
-extension StoryViewModel {
-    func getDataFromImageURL(_ stringUrl: String) -> Data? {
-        return try? Data(contentsOf: URL(string: stringUrl)!)
-    }
 }
