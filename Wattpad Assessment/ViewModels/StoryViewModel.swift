@@ -7,11 +7,18 @@
 
 import UIKit
 
+enum ImageDownloadState {
+  case new, downloaded, failed
+}
+
+typealias voidClosure = () -> ()
+
 protocol StoryViewModelProtocol {
     var title: String { get }
     var authorText: String { get }
-    var coverImage: UIImage { get }
-    var coverDownloaded: Bool { get }
+    var coverImage: UIImage { get set }
+    var imageDownloadState: ImageDownloadState { get set }
+    func fetchCoverImage() -> Data?
 }
 
 class StoryViewModel: StoryViewModelProtocol {
@@ -31,7 +38,16 @@ class StoryViewModel: StoryViewModelProtocol {
     
     var coverImage: UIImage = UIImage(systemName: "cloud")!
     
-    var coverDownloaded: Bool {
-        return coverImage != UIImage(systemName: "cloud")
+    var imageDownloadState: ImageDownloadState = .new
+    
+    func fetchCoverImage() -> Data? {
+        return getDataFromImageURL(self.story.coverImageUrl)
+     }
+}
+
+
+extension StoryViewModel {
+    func getDataFromImageURL(_ stringUrl: String) -> Data? {
+        return try? Data(contentsOf: URL(string: stringUrl)!)
     }
 }

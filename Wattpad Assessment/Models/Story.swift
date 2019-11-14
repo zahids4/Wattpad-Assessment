@@ -12,7 +12,7 @@ import RealmSwift
 public class Story: Object, Decodable {
     @objc dynamic var id: String = "-1"
     @objc dynamic var title = ""
-    @objc dynamic var coverImage = ""
+    @objc dynamic var coverImageUrl = ""
     @objc dynamic var author = ""
     
     enum CodingKeys: String, CodingKey {
@@ -34,6 +34,6 @@ public class Story: Object, Decodable {
         author = try user.decode(String.self, forKey: .author)
         id  = try container.decode(String.self, forKey: .id)
         title = try container.decode(String.self, forKey: .title)
-        coverImage = try container.decode(String.self, forKey: .coverImage)
+        coverImageUrl = try container.decode(String.self, forKey: .coverImage)
     }
 }

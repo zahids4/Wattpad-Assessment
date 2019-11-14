@@ -23,6 +23,7 @@
 		30FB6DBC237D04D300C0EFC3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DBB237D04D300C0EFC3 /* RealmManager.swift */; };
 		30FB6DBE237D0AA700C0EFC3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DBD237D0AA700C0EFC3 /* NetworkManager.swift */; };
 		30FB6DC1237D0F9D00C0EFC3 /* StoriesPersistedAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DC0237D0F9D00C0EFC3 /* StoriesPersistedAlert.swift */; };
+		30FB6DC3237DC82900C0EFC3 /* ImageDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DC2237DC82900C0EFC3 /* ImageDownloadOperation.swift */; };
 		D4AA97A37B2DE4E3F31C5A3F /* Pods_Wattpad_AssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE219A7B5E92734CED8C229 /* Pods_Wattpad_AssessmentTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		30FB6DBB237D04D300C0EFC3 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		30FB6DBD237D0AA700C0EFC3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		30FB6DC0237D0F9D00C0EFC3 /* StoriesPersistedAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesPersistedAlert.swift; sourceTree = "<group>"; };
+		30FB6DC2237DC82900C0EFC3 /* ImageDownloadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadOperation.swift; sourceTree = "<group>"; };
 		5FD19E0AAA67057B47F2D9AD /* Pods_Wattpad_Assessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wattpad_Assessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD6F9384F50960ED4095636 /* Pods-Wattpad Assessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad Assessment.debug.xcconfig"; path = "Target Support Files/Pods-Wattpad Assessment/Pods-Wattpad Assessment.debug.xcconfig"; sourceTree = "<group>"; };
 		D8BEF4237C6CD4B028960BAB /* Pods-Wattpad Assessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad Assessment.release.xcconfig"; path = "Target Support Files/Pods-Wattpad Assessment/Pods-Wattpad Assessment.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				30FB6DB0237CBA1800C0EFC3 /* Models */,
 				30FB6DB5237CC26900C0EFC3 /* ViewModels */,
 				30FB6DBF237D0AAE00C0EFC3 /* Managers */,
+				30FB6DC2237DC82900C0EFC3 /* ImageDownloadOperation.swift */,
 			);
 			path = "Wattpad Assessment";
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				30FB6DB7237CC27A00C0EFC3 /* StoryViewModel.swift in Sources */,
 				30FB6DB9237CC61300C0EFC3 /* StoryTableViewCell.swift in Sources */,
 				30FB6DBC237D04D300C0EFC3 /* RealmManager.swift in Sources */,
+				30FB6DC3237DC82900C0EFC3 /* ImageDownloadOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
