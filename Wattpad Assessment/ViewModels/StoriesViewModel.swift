@@ -21,21 +21,19 @@ class StoriesViewModel: StoriesViewModelProtocol {
         self.delegate = delegate
     }
     
-    private var stories: [StoryViewModelProtocol] = []
-    
     var storiesCount: Int {
-        return stories.count
+        return RealmStoriesManager.shared.getStories.count
     }
     
     func story(at index: Int) -> StoryViewModelProtocol {
-        return stories[index]
+        return RealmStoriesManager.shared.getStory(at: index)
     }
 
     func fetchStories() {
         AF.request(storiesURL).responseDecodable(of: StoriesJSON.self) { response in
             switch response.result {
                 case .success(let json):
-                    self.stories = json.getStoryViewModels()
+                    RealmStoriesManager.shared.saveFetchedStories(json.stories)
                     self.delegate?.fetchComplete()
                 case .failure(let error):
                     self.delegate?.fetchFailed(error)
