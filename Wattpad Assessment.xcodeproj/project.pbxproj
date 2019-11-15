@@ -13,7 +13,7 @@
 		30FB6D91237C964400C0EFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FB6D8F237C964400C0EFC3 /* Main.storyboard */; };
 		30FB6D93237C964500C0EFC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FB6D92237C964500C0EFC3 /* Assets.xcassets */; };
 		30FB6D96237C964500C0EFC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FB6D94237C964500C0EFC3 /* LaunchScreen.storyboard */; };
-		30FB6DA1237C964500C0EFC3 /* Wattpad_AssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DA0237C964500C0EFC3 /* Wattpad_AssessmentTests.swift */; };
+		30FB6DA1237C964500C0EFC3 /* StoryViewModelProtocol_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DA0237C964500C0EFC3 /* StoryViewModelProtocol_Tests.swift */; };
 		30FB6DAC237CB9F700C0EFC3 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DAB237CB9F700C0EFC3 /* StoriesTableViewController.swift */; };
 		30FB6DAF237CBA1200C0EFC3 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DAE237CBA1200C0EFC3 /* Story.swift */; };
 		30FB6DB2237CBD3C00C0EFC3 /* StoriesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DB1237CBD3C00C0EFC3 /* StoriesJSON.swift */; };
@@ -48,7 +48,7 @@
 		30FB6D95237C964500C0EFC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30FB6D97237C964500C0EFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30FB6D9C237C964500C0EFC3 /* Wattpad AssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wattpad AssessmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		30FB6DA0237C964500C0EFC3 /* Wattpad_AssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wattpad_AssessmentTests.swift; sourceTree = "<group>"; };
+		30FB6DA0237C964500C0EFC3 /* StoryViewModelProtocol_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModelProtocol_Tests.swift; sourceTree = "<group>"; };
 		30FB6DA2237C964500C0EFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30FB6DAB237CB9F700C0EFC3 /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
 		30FB6DAE237CBA1200C0EFC3 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		30FB6D9F237C964500C0EFC3 /* Wattpad AssessmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				30FB6DA0237C964500C0EFC3 /* Wattpad_AssessmentTests.swift */,
+				30FB6DA0237C964500C0EFC3 /* StoryViewModelProtocol_Tests.swift */,
 				30FB6DA2237C964500C0EFC3 /* Info.plist */,
 			);
 			path = "Wattpad AssessmentTests";
@@ -384,7 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30FB6DA1237C964500C0EFC3 /* Wattpad_AssessmentTests.swift in Sources */,
+				30FB6DA1237C964500C0EFC3 /* StoryViewModelProtocol_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,13 @@ public class Story: Object, Decodable {
         return "id"
     }
     
+    convenience init(author: String, url: String, title: String) {
+        self.init()
+        self.author = author
+        self.coverImageUrl = url
+        self.title = title
+    }
+    
     required convenience public init(from decoder: Decoder) throws {
         self.init()
         let container = try decoder.container(keyedBy: CodingKeys.self)
