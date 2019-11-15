@@ -71,7 +71,7 @@ extension StoriesTableViewController: StoriesViewModelDelegate {
         }
     }
     
-    func showAlert() {
+    func showOfflineUsageAlert() {
         DispatchQueue.main.async {
             let alert = StoriesPersistedAlert().getAlert()
             self.present(alert, animated: true, completion: nil)
@@ -80,6 +80,8 @@ extension StoriesTableViewController: StoriesViewModelDelegate {
 
     
     func fetchFailed(_ error: AFError) {
+        // This is where one could show another alert informing the user the fetch has failed
+        // I could also implement pull to refresh to allow the user to fetch the list again after failure
         print("Error: \(error)")
     }
 }

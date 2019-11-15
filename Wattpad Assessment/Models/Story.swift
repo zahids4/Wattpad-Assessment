@@ -1,5 +1,4 @@
 import Foundation
-import Realm
 import RealmSwift
 
 public class Story: Object, Decodable {
@@ -20,13 +19,6 @@ public class Story: Object, Decodable {
         return "id"
     }
     
-    convenience init(author: String, url: String, title: String) {
-        self.init()
-        self.author = author
-        self.coverImageUrl = url
-        self.title = title
-    }
-    
     required convenience public init(from decoder: Decoder) throws {
         self.init()
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -35,5 +27,15 @@ public class Story: Object, Decodable {
         id  = try container.decode(String.self, forKey: .id)
         title = try container.decode(String.self, forKey: .title)
         coverImageUrl = try container.decode(String.self, forKey: .coverImage)
+    }
+}
+
+extension Story {
+    // MARK: - Initializer for testing
+    convenience init(author: String, url: String, title: String) {
+        self.init()
+        self.author = author
+        self.coverImageUrl = url
+        self.title = title
     }
 }

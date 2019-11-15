@@ -11,7 +11,7 @@ protocol StoriesViewModelProtocol {
 
 protocol StoriesViewModelDelegate: class {
     func fetchComplete()
-    func showAlert()
+    func showOfflineUsageAlert()
     func fetchFailed(_ error: AFError)
 }
 
@@ -50,7 +50,7 @@ class StoriesViewModel: StoriesViewModelProtocol {
                 case .success(let json):
                     self.realmManager.saveFetchedStories(json.stories) {
                         setStoriesAndRefresh()
-                        self.delegate?.showAlert()
+                        self.delegate?.showOfflineUsageAlert()
                     }
                 case .failure(let error):
                     self.delegate?.fetchFailed(error)
