@@ -24,13 +24,8 @@ class RealmStoriesManager {
         }
     }
     
-    var getStories: Results<Story> {
+    var allStories: Results<Story> {
         let realm = try! Realm()
         return realm.objects(Story.self)
-    }
-    
-    func getStory(at index: Int) -> StoryViewModelProtocol {
-        let story = getStories[index]
-        return StoryViewModel(story)
     }
 }
