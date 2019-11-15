@@ -1,10 +1,3 @@
-//
-//  Wattpad_AssessmentTests.swift
-//  Wattpad AssessmentTests
-//
-//  Created by Saim Zahid on 2019-11-13.
-//
-
 import XCTest
 @testable import Wattpad_Assessment
 

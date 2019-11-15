@@ -1,10 +1,3 @@
-//
-//  StoriesTableViewController.swift
-//  Wattpad Assessment
-//
-//  Created by Saim Zahid on 2019-11-13.
-//
-
 import UIKit
 import Alamofire
 
@@ -31,6 +24,12 @@ class StoriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 218.0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            self.tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

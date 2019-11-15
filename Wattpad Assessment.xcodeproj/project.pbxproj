@@ -113,12 +113,12 @@
 				30FB6D8B237C964400C0EFC3 /* SceneDelegate.swift */,
 				30FB6D92237C964500C0EFC3 /* Assets.xcassets */,
 				30FB6D97237C964500C0EFC3 /* Info.plist */,
+				30FB6DC2237DC82900C0EFC3 /* ImageDownloadOperation.swift */,
 				30FB6DBA237CC93100C0EFC3 /* Storyboards */,
 				30FB6DAD237CB9FC00C0EFC3 /* Views */,
 				30FB6DB0237CBA1800C0EFC3 /* Models */,
 				30FB6DB5237CC26900C0EFC3 /* ViewModels */,
 				30FB6DBF237D0AAE00C0EFC3 /* Managers */,
-				30FB6DC2237DC82900C0EFC3 /* ImageDownloadOperation.swift */,
 			);
 			path = "Wattpad Assessment";
 			sourceTree = "<group>";

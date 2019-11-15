@@ -1,10 +1,3 @@
-//
-//  StoryTableViewCell.swift
-//  Wattpad Assessment
-//
-//  Created by Saim Zahid on 2019-11-13.
-//
-
 import UIKit
 
 class StoryTableViewCell: UITableViewCell {

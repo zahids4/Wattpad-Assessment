@@ -1,10 +1,3 @@
-//
-//  Story.swift
-//  Wattpad Assessment
-//
-//  Created by Saim Zahid on 2019-11-13.
-//
-
 import Foundation
 import Realm
 import RealmSwift
