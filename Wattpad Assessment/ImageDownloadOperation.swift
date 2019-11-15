@@ -23,6 +23,8 @@ class DownloadOperation: Operation {
             self.storyViewModel.coverImage = UIImage(data:imageData)!
             self.storyViewModel.imageDownloadState = .downloaded
         } else {
+            // In a production app this control flow should show a button for the user
+            // to re download the image
             self.storyViewModel.imageDownloadState = .failed
         }
     }
