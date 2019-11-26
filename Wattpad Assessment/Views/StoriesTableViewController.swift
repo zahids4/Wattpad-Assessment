@@ -4,12 +4,12 @@ import Alamofire
 class StoriesTableViewController: UITableViewController {
     private let operations = ImageDownloadOperations()
     private var viewModel: StoriesViewModelProtocol!
+    var hasLoaded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewModel = StoriesViewModel(delegate: self)
-        viewModel.fetchStories()
+        viewModel.fetchStories(offset: "0")
     }
 
     // MARK: - Table view data source
@@ -38,8 +38,14 @@ class StoriesTableViewController: UITableViewController {
         let story = viewModel.story(at: indexPath.row)
         cell.configure(with: story)
         
-        if story.shouldDownloadImage {
-            startDownloadOperation(for: story, at: indexPath)
+//        if story.shouldDownloadImage {
+//            startDownloadOperation(for: story, at: indexPath)
+//        }
+
+        if indexPath.row == 9 && hasLoaded {
+            hasLoaded = false
+            print(viewModel.storiesCount)
+            viewModel.fetchStories(offset: "\(viewModel.storiesCount)")
         }
         
         return cell
@@ -68,6 +74,7 @@ extension StoriesTableViewController: StoriesViewModelDelegate {
     func fetchComplete() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.hasLoaded = true
         }
     }
     
@@ -85,3 +92,12 @@ extension StoriesTableViewController: StoriesViewModelDelegate {
         print("Error: \(error)")
     }
 }
+//
+//extension StoriesTableViewController: UITableViewDataSourcePrefetching {
+//    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+//        print(indexPaths)
+//        if indexPaths.contains(IndexPath(row: 8, section: 0)) {
+//            print("Fetch next list")
+//        }
+//    }
+//}

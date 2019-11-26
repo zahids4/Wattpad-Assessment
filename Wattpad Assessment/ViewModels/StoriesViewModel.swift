@@ -6,7 +6,7 @@ fileprivate let storiesURL = "https://www.wattpad.com/api/v3/stories?offset=0&li
 protocol StoriesViewModelProtocol {
     var storiesCount: Int { get }
     func story(at index: Int) -> StoryViewModelProtocol
-    func fetchStories()
+    func fetchStories(offset: String)
 }
 
 protocol StoriesViewModelDelegate: class {
@@ -34,7 +34,8 @@ class StoriesViewModel: StoriesViewModelProtocol {
         return stories[index]
     }
 
-    func fetchStories() {
+    func fetchStories(offset: String) {
+        let url = "https://www.wattpad.com/api/v3/stories?offset=\(offset)&limit=10&fields=stories(id,title,cover,user)&filter=new"
         let setStoriesAndRefresh = {
             self.stories = self.realmManager.allStories.map({ StoryViewModel($0) })
             self.delegate?.fetchComplete()
@@ -45,7 +46,7 @@ class StoriesViewModel: StoriesViewModelProtocol {
             return
         }
         
-        AF.request(storiesURL).responseDecodable(of: StoriesJSON.self) { response in
+        AF.request(url).responseDecodable(of: StoriesJSON.self) { response in
             switch response.result {
                 case .success(let json):
                     self.realmManager.saveFetchedStories(json.stories) {
